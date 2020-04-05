@@ -1,0 +1,290 @@
+body{
+	color: white;
+	background-color: black;
+	font-size: 20px;
+}
+body, h1, h2, h3, div, img, p, a{
+	margin: 0;
+	padding: 0;
+}
+#top{
+	display: grid;
+	padding: 2vw 1vw;
+	margin: auto;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(8, auto);
+	grid-template-areas: "logo logo logo logo mobileicon"
+						'welcome welcome welcome welcome welcome'
+						'about about about about about'
+						'products products products products products'
+						'cervices cervices cervices cervices cervices'
+						'contact contact contact contact contact'
+						'banner banner banner banner banner'
+						'img1 img2 img3 img4 img5';
+					}
+#logo{
+	grid-area: logo;
+}
+#mobileicon{
+	grid-area: mobileicon;
+	margin: auto;
+	text-align: center;
+	font-size: 3em;
+	cursor: pointer;
+}
+#welcome{
+	grid-area: welcome;
+	
+}
+#about{
+	grid-area: about;
+	
+}
+#products{
+	grid-area: products;
+	
+}
+#cervices{
+	grid-area: cervices;
+	
+}
+#contact{
+	grid-area: contact;
+	
+}
+#banner{
+	grid-area: banner;
+}
+#banner img{
+	width:100%;
+	height:auto;
+	padding: 2vw 0;
+}
+#img1 img, #img2 img, #img3 img, #img4 img, #img5 img{
+	width:100%;
+	height:auto;
+	border: 2px solid white;
+}
+
+#img1{
+	grid-area: img1;
+	
+}
+#txt1{
+	grid-area: txt1;
+	display: none;
+}
+#img2{
+	grid-area: img2;
+	
+}
+#txt2{
+	grid-area: txt2;
+	display: none;
+}
+#img3{
+	grid-area: img3;
+	
+}
+#txt3{
+	grid-area: txt3;
+	display: none;
+}
+#img4{
+	grid-area: img4;
+	
+}
+#txt4{
+	grid-area: txt4;
+	display: none;
+}
+#img5{
+	grid-area: img5;
+	
+}
+#txt5{
+	grid-area: txt5;
+	display: none;
+}
+
+#top h1>a{
+	font-size:1em;
+	font-weight:900;
+	border-bottom:none;
+	color:white;
+	text-decoration:none;
+}
+#bannerText{
+	display: none;
+}
+
+#welcome a,
+#about a,
+#products a,
+#cervices a,
+#contact a{
+	font-size:1em;
+	color:white;
+	text-decoration:none;
+	border-bottom:1px solid DarkKhaki;
+	display: block;
+	margin: auto;
+	padding: 1vw 0;
+	text-align: center;
+}
+#welcome a:hover,
+#about a:hover,
+#products a:hover,
+#cervices a:hover,
+#contact a:hover{
+	color:DarkKhaki;
+	border-bottom:1px solid white;
+}
+#header{
+	display: none;
+}
+#paragrph{
+	display: none;
+}
+
+
+
+#bottom{
+	padding: 2vw 1vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: 'template template'
+						'templateText templateText'
+						'subheadingImg1 subheadingText1'
+						'subheadingImg2 subheadingText2'
+						'copyright copyright';
+}
+
+#template{
+	grid-area: template;
+	padding: 1vw 0;
+	border-bottom: 1px solid white;
+}
+
+#templateText{
+	grid-area: templateText;
+	padding: 1vw 0;
+}
+#subheadingImg1{
+	grid-area: subheadingImg1;
+	line-height: 0;
+	border-right: 1px solid white;
+	padding-right: 1vw;
+}
+#subheadingImg1 img{
+	width:100%;
+	height:auto;
+	
+}
+#subheadingText1{
+	grid-area: subheadingText1;
+	
+}
+#subheadingText1>*, #subheadingText2>*{
+	padding: 1vw 1vw;
+}
+#subheadingImg2{
+	grid-area: subheadingImg2;
+	line-height: 0;
+	border-right: 1px solid white;
+	padding-right: 1vw;
+}
+#subheadingImg2 img{
+	width:100%;
+	height:auto;
+
+}
+#subheadingText2{
+	grid-area: subheadingText2;
+}
+#copyright{
+	grid-area: copyright;
+	padding: 1vw 0;
+	text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+	#top{
+		grid-template-columns: 2fr 5fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(8, auto);
+		grid-template-areas: 'logo logo welcome about products cervices contact'
+							'banner banner img1 img1 txt1 txt1 txt1'
+							'banner banner img2 img2 txt2 txt2 txt2'
+							'banner banner img3 img3 txt3 txt3 txt3'
+							'banner banner img4 img4 txt4 txt4 txt4'
+							'header header img5 img5 txt5 txt5 txt5'
+							'paragrph paragrph img5 img5 txt5 txt5 txt5'
+							'bannerText bannerText bannerText bannerText bannerText bannerText bannerText'
+							;
+		width: 80vw;
+		padding: 2vw 0;
+		
+	}
+	#header{
+		grid-area: header;
+		display: initial;
+		padding: 1vw 0;
+	}
+	#paragrph{
+		grid-area: paragrph;
+		display: initial;
+		padding: 1vw 0;
+	}
+	#bannerText{
+		grid-area: bannerText;
+		display: initial;
+		padding: 1vw 1vw;
+	}
+	#txt1, #txt2, #txt3, #txt4, #txt5{
+		display: initial;
+		padding: 0 0 0 1vw;
+	}
+	#mobileicon{
+		display: none;
+	}
+
+	#welcome a,
+	#about a,
+	#products a,
+	#cervices a,
+	#contact a{
+		font-size:1em;
+		color:white;
+		text-decoration:none;
+		border-bottom:none;
+		display: block;
+		margin: auto;
+		padding: 1vw 0;
+		text-align: center;
+	}
+	#welcome a:hover,
+	#about a:hover,
+	#products a:hover,
+	#cervices a:hover,
+	#contact a:hover{
+		color:DarkKhaki;
+		border-bottom:none;
+	}
+
+
+
+	#bottom{
+		width: 80vw;
+		margin: auto;
+		padding: 2vw 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: 'template template template template'
+							'templateText templateText templateText templateText'
+							'subheadingImg1 subheadingText1 subheadingImg2 subheadingText2'
+							'copyright copyright copyright copyright';
+	}
+
+}
